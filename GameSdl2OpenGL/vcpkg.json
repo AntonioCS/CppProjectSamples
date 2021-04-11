@@ -1,5 +1,5 @@
 {
-	"name": "antons-opengl",
+	"name": "project-sdl2",
 	"version-string": "0.1.0-dev",
 	"homepage": "",
 	"description": "",
@@ -12,6 +12,10 @@
 		"sdl2-net",
 		"sdl2-gfx",
 		"glad",
-		"spdlog"
+		"spdlog",
+    {
+      "name": "imgui",
+      "features": [ "opengl3-glad-binding", "sdl2-binding" ]
+    }
   ]
 }
