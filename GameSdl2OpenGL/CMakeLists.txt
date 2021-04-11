@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
-project(sdl2_sample CXX)            
+project(project-sdl2 CXX)
 
 if (NOT DEFINED CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 20)
@@ -36,9 +36,11 @@ find_package(sdl2-mixer CONFIG REQUIRED)
 find_package(sdl2-net CONFIG REQUIRED)
 find_package(sdl2-gfx CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
+find_package(imgui CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
 
 include_directories(${OPENGL_INCLUDE_DIR})
+
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE SDL2::SDL2 SDL2::SDL2main)
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE SDL2::SDL2_image)
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE SDL2::SDL2_ttf)
@@ -47,4 +49,4 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE SDL2::SDL2_net)
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE SDL2::SDL2_gfx)
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE glad::glad)
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE spdlog::spdlog spdlog::spdlog_header_only)
-
+target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE imgui::imgui)
