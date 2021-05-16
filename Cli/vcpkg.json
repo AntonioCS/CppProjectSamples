@@ -1,0 +1,15 @@
+{
+    "name": "project-cli",
+    "version-string": "0.1.0-dev",
+    "homepage": "",
+    "description": "",
+    "dependencies": [
+        "spdlog"
+    ],
+    "features": {
+        "tests": {
+            "description": "Build Tests",
+            "dependencies": [ "catch2" ]
+        }
+    }
+}
