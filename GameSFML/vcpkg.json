@@ -1,0 +1,11 @@
+{
+	"name": "project-sfml",
+	"version-string": "0.1.0-dev",
+	"homepage": "",
+	"description": "",
+	"dependencies": [
+		"opengl",
+		"sfml",
+		"spdlog"
+  ]
+}
